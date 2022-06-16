@@ -10,4 +10,7 @@ public class CourseResponse {
     private long courseId;
     private String courseName;
     private boolean enable;
+
+    public CourseResponse() {
+    }
 }

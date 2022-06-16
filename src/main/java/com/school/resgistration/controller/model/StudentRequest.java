@@ -1,4 +1,4 @@
-package com.school.resgistration.repository.entity;
+package com.school.resgistration.controller.model;
 
 import lombok.Data;
 
@@ -8,12 +8,11 @@ import javax.persistence.Id;
 
 @Entity
 @Data
-public class CourseEntity {
+public class StudentRequest {
+
     @Id
     @GeneratedValue
-    private long courseId;
-    private String courseName;
+    private long studentId;
+    private String name;
     private boolean enable;
-    private String description;
-
 }

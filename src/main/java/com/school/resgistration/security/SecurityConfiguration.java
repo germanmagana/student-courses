@@ -14,16 +14,16 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable().authorizeRequests()
-            .antMatchers("/swagger-ui/**", "/student-courses-api/**").permitAll().anyRequest()
-            .authenticated().and().httpBasic();
+            .antMatchers("/swagger-ui**", "/swagger-ui/**", "/student-courses-api/**").permitAll()
+            .anyRequest().authenticated().and().httpBasic();
     }
 
 
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.inMemoryAuthentication().withUser("admin")
-            .password(passwordEncoder().encode("123")).authorities("ADMIN");
+        auth.inMemoryAuthentication().withUser("admin").password(passwordEncoder().encode("123"))
+            .authorities("ADMIN");
     }
 
     @Bean

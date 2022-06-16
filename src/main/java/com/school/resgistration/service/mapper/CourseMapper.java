@@ -5,6 +5,8 @@ import com.school.resgistration.service.model.CourseDTO;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
+import java.util.List;
+
 @Mapper
 public interface CourseMapper {
 
@@ -12,4 +14,5 @@ public interface CourseMapper {
 
     public CourseEntity to(CourseDTO courseDTO);
     public CourseDTO from(CourseEntity courseEntity);
+    public List<CourseDTO> fromList(List<CourseEntity> courseEntities);
 }

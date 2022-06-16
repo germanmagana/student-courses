@@ -1,0 +1,21 @@
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+
+    #Database configuration
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+    jpa:
+      database-platform: org.hibernate.dialect.H2Dialect
+
+server:
+  port: 8080
+
+logging:
+  level:
+      org.springframework.web: TRACE
+      org.springframework.security: TRACE

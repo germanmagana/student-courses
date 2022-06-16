@@ -7,15 +7,14 @@ import com.school.resgistration.service.CourseService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
+import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
+/**
+ * @author German Magana
+ */
 @Configuration
 public class CourseConfig {
 
-    @Bean
-    public CourseController courseController(CourseService courseService){
-
-        return new CourseController(courseService);
-    }
 
     @Bean
     public CourseService courseService(CourseRepository courseRepository){
@@ -27,5 +26,10 @@ public class CourseConfig {
         return new
             Jackson2ObjectMapperBuilder()
             .serializationInclusion(JsonInclude.Include.NON_NULL);
+    }
+
+    @Bean
+    public InternalResourceViewResolver defaultViewResolver() {
+        return new InternalResourceViewResolver();
     }
 }
