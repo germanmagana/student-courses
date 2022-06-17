@@ -5,9 +5,9 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class StudentResponse {
+public class StudentCourseRequest {
 
-    private long studentId;
-    private String name;
-    private boolean enable;
+    private String studentName;
+    private String courseName;
+
 }
