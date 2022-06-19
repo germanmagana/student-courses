@@ -14,6 +14,5 @@ public class CourseEntity {
     private long courseId;
     private String courseName;
     private boolean enable;
-    private String description;
 
 }

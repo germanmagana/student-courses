@@ -40,6 +40,9 @@ public class StudentCourseController {
         StudentCourseDTO studentCourseDTO = studentCourseService
             .register(studentCourseRequest.getStudentName(), studentCourseRequest.getCourseName());
 
-        return new StudentCourseResponse();
+        return  StudentCourseResponse.builder()
+            .courseEntity(studentCourseDTO.getCourseEntity())
+            .courseEntity(studentCourseDTO.getCourseEntity())
+            .build();
     }
 }
