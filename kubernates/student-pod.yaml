@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: student-pod
+  labels:
+    component: web
+spec:
+  containers:
+    - name: student
+      image: docker.io/library/student:latest
+      imagePullPolicy: Never
+      ports:
+        - containerPort: 8080
+
