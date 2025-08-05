@@ -8,10 +8,10 @@ spec:
   rules:
     - http:
         paths:
-          - path: /
-            pathType: Prefix
+          - path: /?(.*)
+            pathType: ImplementationSpecific
             backend:
               service:
                 name: student-cluster-api-service
                 port:
-                  number: 8080
+                  number: 31515
