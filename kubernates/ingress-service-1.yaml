@@ -14,4 +14,4 @@ spec:
               service:
                 name: student-cluster-api-service
                 port:
-                  number: 31515
+                  number: 8080
