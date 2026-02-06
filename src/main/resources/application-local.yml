@@ -1,7 +1,7 @@
 
   server:
     servlet:
-      context-path: /erp-view-dev
+      context-path: /student-api
   spring:
   main:
     allow-bean-definition-overriding: true
