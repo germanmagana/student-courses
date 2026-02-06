@@ -1,5 +1,8 @@
 
-spring:
+  server:
+    servlet:
+      context-path: /erp-view-dev
+  spring:
   main:
     allow-bean-definition-overriding: true
 
